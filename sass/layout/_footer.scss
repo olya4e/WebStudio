@@ -1,33 +1,31 @@
-address {
-    font-style: normal;
-}
-
 .page-footer {
     background-color: var(--bg-dark-color);
     padding-top: 60px;
     padding-bottom: 60px;
+   
+    
 }
 
 .logo.footer {
     margin-bottom: 20px;
     color: var(--primary-white-color);
+
 }
 
-.adds {
+.address {
     display: flex;
     flex-direction: column;
     gap: 9px;
     line-height: 1.7;
+    
 }
 
-.adds .location {
+.address__location {
     color: var(--primary-white-color);
-    text-decoration: none;
 }
 
-.adds .link {
+.address__link {
     color: rgba(255, 255, 255, 0.6);
-    text-decoration: none;
     transition: color var(--transition-dur-func);
     &:hover,
     &:focus {
@@ -38,16 +36,20 @@ address {
 
 
 
-.main-footer-menu {
-    display: flex;
-    column-gap: 70px;
+.page-footer__wrapper {
+    display: block;
+    margin: 0 auto;
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        column-gap: 70px;
+    }
 }
 
 .footer-social-list {
     padding: 10px;
 }
 
-.fotter-menu {
+.page-footer__address-wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
