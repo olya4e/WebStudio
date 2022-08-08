@@ -35,7 +35,7 @@
     width: 18px;
     height: 18px;
     fill: #212121;
-    transition: var(--transition-dur-func);
+    transition: fill var(--transition-dur-func);
     .contact-form-input:focus + & {
         fill: var(--accent-color);
     }
@@ -49,7 +49,8 @@
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    transition: var(--transition-dur-func);
+    transition: outline var(--transition-dur-func),
+    transition: border-color var(--transition-dur-func);
     &:focus {
         outline: transparent;
         border-color: var(--accent-color);
@@ -68,7 +69,8 @@
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.8);
-    transform: var(--transition-dur-func);
+    transform: outline var(--transition-dur-func),
+    border-color var(--transition-dur-func);
 
     &::placeholder {
         font-family: 'Roboto';
@@ -104,7 +106,8 @@
     height: 15px;
     border: 2px solid #212121;
     border-radius: 2px;
-    transition: var(--transition-dur-func);
+    transition: background-color var(--transition-dur-func),
+        border var(--transition-dur-func);
 }
 
 .contact-form-checkbox-icon {
