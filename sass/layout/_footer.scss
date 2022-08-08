@@ -18,6 +18,13 @@
 .page-footer__wrapper {
     display: block;
     margin: 0 auto;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items:baseline;
+        
+    }
 
     @media screen and (min-width: 1200px) {
         display: flex;
@@ -29,6 +36,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and(max-width: 1199px) {
+        margin-bottom: 60px;
+    }
 }
 
 .address {
@@ -65,9 +75,10 @@
 
 .footer-social-list {
     padding: 10px;
-    @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+    @media screen and (min-width: 1200px) {
             margin-top: 60px;
-            margin-bottom: 60px;
+            
     
         }
 
