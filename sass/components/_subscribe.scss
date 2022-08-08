@@ -1,6 +1,12 @@
 .subscribe-form-footer {
-    display: flex;
-    flex-direction: column;
+    display: block;
+
+    @media screen and (max-width: 1199px) {
+        display: flex;
+            flex-direction: column;
+        
+    }
+   
 }
 
 .subscribe-form-title-footer {
@@ -10,6 +16,10 @@
     line-height: 16px;
     text-transform: uppercase;
     color: var(--primary-white-color);
+    @media screen and (max-width: 1199px) {
+          text-align: center;
+    
+        }
 }
 
 .subscribe-form-input-footer {
@@ -23,11 +33,22 @@
     font-size: 16px;
     line-height: 20px;
     color: var(--primary-white-color);
+    @media screen and (max-width: 1199px) {
+            max-width: 450px;
+            margin-bottom: 20px;
+
+    
+        }
+    
 
 }
 
 .subscribe-form-field-footer {
     display: flex;
+    @media screen and (max-width: 1199px) {
+            display: block;
+    
+        }
 }
 
 .subscribe-form-submit-wrapper {
