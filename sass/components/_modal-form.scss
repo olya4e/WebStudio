@@ -49,8 +49,6 @@
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    transition: outline var(--transition-dur-func),
-    transition: border-color var(--transition-dur-func);
     &:focus {
         outline: transparent;
         border-color: var(--accent-color);
