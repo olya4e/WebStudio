@@ -566,6 +566,8 @@ address {
     width: 100%;
     height: 100%;
     padding-top: 48px;
+    padding-right: 40px;
+    padding-bottom: 48px;
     padding-left: 40px;
     background-color: #fff;
     overflow: auto;
@@ -637,7 +639,7 @@ address {
   margin-bottom: 32px;
   color: var(--accent-color);
   font-weight: 500;
-  font-size: 34px;
+  font-size: 32px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   text-decoration: none;
@@ -652,6 +654,7 @@ address {
 
 .mobile-menu__social-list {
   display: flex;
+  flex-wrap: wrap;
   position: relative;
   gap: 20px;
 }
@@ -659,7 +662,7 @@ address {
 .mobile-menu__social-item::after {
   display: inline-block;
   position: absolute;
-  top: 50%;
+  top: 10px;
   content: "";
   width: 22px;
   height: 2px;
@@ -720,7 +723,7 @@ address {
 .contacts {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
 }
 @media screen and (max-width: 767px) {
   .contacts {
@@ -781,12 +784,7 @@ address {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/webstudio/bg-hero-mobile.jpg);
 }
 
-@media screen and (max-width: 767px) {
-  .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rbga(47, 48, 58, 0.4)), url(../images/webstudio/bg-hero-mobile.jpg);
-  }
-}
-@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/webstudio/bg-hero-mobile@2x.jpg);
   }
@@ -814,6 +812,7 @@ address {
 .hero__title {
   display: block;
   width: 100%;
+  max-width: 360px;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.62;
@@ -828,7 +827,7 @@ address {
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
-    width: 700px;
+    max-width: 700px;
     margin-top: 106px;
     font-size: 44px;
     line-height: 1.36;
@@ -956,13 +955,6 @@ address {
   width: 100%;
 }
 @media screen and (min-width: 768px) {
-  .team__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-}
-@media screen and (min-width: 1200px) {
   .team__list {
     display: flex;
     flex-wrap: wrap;
@@ -1147,11 +1139,6 @@ address {
 .product-item {
   transition: box-shadow var(--transition-dur-func);
 }
-@media screen and (max-width: 767px) {
-  .product-item:not(:last-child) {
-    margin-bottom: 30px;
-  }
-}
 @media screen and (min-width: 768px) {
   .product-item {
     width: calc((100% - 30px) / 2);
@@ -1173,21 +1160,28 @@ address {
 }
 
 .product-group-overlay {
+  display: flex;
+  align-items: stretch;
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 63px 24px;
-  text-align: center;
+  padding: 10px 24px;
+  overflow: auto;
   font-size: 18px;
-  line-height: 1.56;
+  line-height: 1.5;
   letter-spacing: 0.03em;
   color: var(--primary-white-color);
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
   transition: transform var(--transition-dur-func);
+}
+@media screen and (min-width: 350px) {
+  .product-group-overlay {
+    align-items: center;
+  }
 }
 
 .product-item:hover .product-group-overlay {

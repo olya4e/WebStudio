@@ -11,18 +11,16 @@
         url(../images/webstudio/bg-hero-mobile.jpg);
 }
 
-@media screen and (max-width:767px) {
-    .hero{
-    background-image:linear-gradient(rgba(47, 48, 58, 0.4), rbga(47, 48, 58, 0.4)),
-     url(../images/webstudio/bg-hero-mobile.jpg);
+
         @media (min-device-pixel-ratio: 2),
                     (min-resolution: 192dpi),
                     (min-resolution: 2dppx){
-                    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-                    url(../images/webstudio/bg-hero-mobile@2x.jpg);
+         .hero{
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+             url(../images/webstudio/bg-hero-mobile@2x.jpg);
             }
         }
-}
+
 
 @media screen and (min-width:768px) {
     .hero{
@@ -58,6 +56,7 @@
 .hero__title {
     display: block;
     width: 100%;
+    max-width: 360px;
     font-weight: 900;
     font-size: 26px;
     line-height: 1.62;
@@ -70,8 +69,9 @@
     margin-left: auto;
     color: var(--primary-white-color);
 
+
 @media screen and (min-width: 1200px) {
-    width: 700px;
+    max-width: 700px;
     margin-top: 106px;
     font-size: 44px;
     line-height: 1.36;

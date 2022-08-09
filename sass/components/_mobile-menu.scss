@@ -9,6 +9,8 @@
         width: 100%;
         height: 100%;
         padding-top: 48px;
+        padding-right: 40px;
+        padding-bottom: 48px;
         padding-left: 40px;
         background-color:#fff;
         overflow: auto;
@@ -89,7 +91,7 @@
         margin-bottom: 32px;
         color: var(--accent-color);
         font-weight: 500;
-        font-size: 34px;
+        font-size: 32px;
         line-height: 1.17;
         letter-spacing: 0.02em;
         text-decoration: none;
@@ -105,6 +107,7 @@
 
 .mobile-menu__social-list{
     display: flex;
+    flex-wrap: wrap;
     position: relative;
     gap: 20px;
 }
@@ -112,7 +115,7 @@
 .mobile-menu__social-item::after {
     display: inline-block;
     position: absolute;
-    top: 50%;
+    top: 10px;
     content: "";
     width: 22px;
     height: 2px;
