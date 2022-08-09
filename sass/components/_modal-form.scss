@@ -85,7 +85,8 @@
 
 .contact-form-checkbox-desc {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
     margin-top: 20px;
     margin-bottom: 30px;
@@ -97,7 +98,7 @@
 
 .contact-form-checkbox-icon-wrapper {
     position: relative;
-    display: block;
+    display: inline-block;
     margin-right: 8px;
     content: "";
     width: 16px;
